@@ -166,3 +166,17 @@ nav a[aria-current="page"]{color:var(--gold)}
 .title-link{color:inherit;text-decoration:none}
 @media (max-width:800px){.shelf-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.shelf .book-body{padding:16px}.shelf h3{font-size:1.05rem}.book-page .buy .btn{margin:8px 0}}
 .hero h1.book-title{font-size:clamp(1.9rem,3.8vw,2.8rem);line-height:1.15;margin:0 0 14px}
+/* shelf store links, pre-order + series (Nov 2026) */
+.shelf .store-wrap{padding-top:0;flex:0}
+.store-row{display:flex;flex-wrap:wrap;gap:6px 14px;margin:0 0 14px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+.store-row a{color:var(--gold);text-decoration:none;border-bottom:1px solid transparent}
+.store-row a:hover{color:var(--gold-hi);border-bottom-color:var(--gold-hi)}
+.store-row.muted{color:var(--muted)}
+.pre-badge{align-self:flex-start;border:1px solid var(--gold);color:var(--gold);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;padding:4px 10px;margin:0 0 10px}
+.series-num{color:var(--gold);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin:0 0 6px}
+.series-link,.series-back{margin:-6px 0 26px;font-size:.9rem}
+.series-back{margin:6px 0 18px;color:var(--muted)}
+.series-link a,.series-back a{color:var(--gold)}
+.ph-card{opacity:.75}
+@media (max-width:800px){.store-row{gap:4px 10px;font-size:.64rem}}
+.series-link{text-align:center}
