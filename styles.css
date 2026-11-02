@@ -18,7 +18,7 @@ h3{color:var(--gold-hi)}
 nav a{color:var(--muted);text-decoration:none;margin-left:30px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500;transition:color .2s}
 nav a:hover{color:var(--gold)}
 /* hero */
-.hero{min-height:min(80vh,740px);display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 28px;
+.hero{padding:90px 0 110px;
  background:radial-gradient(ellipse at 50% 40%,rgba(201,165,76,.09),transparent 62%),var(--bg)}
 .eyebrow{color:var(--gold);text-transform:uppercase;font-size:.78rem;letter-spacing:.42em;font-weight:500;margin:0 0 22px}
 .hero h1{font-size:clamp(2.3rem,9vw,6.4rem);font-weight:600;margin:0}
@@ -33,8 +33,8 @@ nav a:hover{color:var(--gold)}
 .btn-ghost:hover{background:rgba(201,165,76,.08);border-color:var(--gold)}
 /* sections */
 section{border-top:1px solid var(--line)}
-.featured,.books,.about,.connect{padding:110px 0}
-.featured,.about{background:var(--bg2)}
+.books,.about,.connect{padding:110px 0}
+.about,.books-alt{background:var(--bg2)}
 .section-title{display:block;text-align:center;font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:14px}
 .section-title::after{content:"";display:block;width:70px;height:1px;background:var(--gold);margin:22px auto 56px}
 .about .section-title{text-align:left}.about .section-title::after{margin-left:0;margin-bottom:30px}
@@ -79,16 +79,75 @@ details summary::before{content:"+ "}details[open] summary::before{content:"– 
 .nl-row button{padding:14px 24px;background:transparent;border:1px solid var(--line);color:var(--muted);font:600 .76rem var(--sans);letter-spacing:.18em;text-transform:uppercase}
 .newsletter .placeholder{color:var(--gold);font-size:.78rem;letter-spacing:.06em;margin:16px 0 0}
 footer{text-align:center;padding:40px 28px;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+.hero-head{text-align:center;margin-bottom:80px}
+.hero .featured-grid{align-items:start}
+.hero .featured-cover{width:100%}
+.hero-blurb ul{margin:0 0 1em;padding-left:1.2em}.hero-blurb li{margin:.2em 0}
+.hero-blurb b{color:var(--gold-hi);font-weight:500}
+nav a[aria-current="page"]{color:var(--gold)}
+.cover-ph{aspect-ratio:5/8;display:flex;align-items:center;justify-content:center;border:1px dashed var(--line-strong);color:var(--gold);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+.placeholder{color:var(--gold);font-size:.82rem;letter-spacing:.04em}
+/* signup under hero */
+.signup{padding:70px 0;background:var(--bg2)}
+.signup .newsletter{text-align:center}
+.signup .nl-row{justify-content:center}
+.nl-row .btn{margin:0}
+.fine{color:var(--muted);font-size:.8rem;margin:14px 0 0}
+.fine a{color:var(--gold)}
+.form-msg{display:none;margin:16px 0 0;padding:12px 16px;border:1px solid var(--gold);color:var(--gold-hi);font-size:.92rem;background:rgba(201,165,76,.06)}
+.form-msg.show{display:block}
+/* sub-pages */
+.page-hero{padding:100px 0 70px;text-align:center;border-top:0}
+.page-hero h1{font-size:clamp(2.3rem,6vw,4.2rem)}
+.tiers-sec,.form-sec{padding:80px 0}
+.tiers-sec{background:var(--bg2)}
+.ph-banner{text-align:center;border:1px dashed var(--line-strong);color:var(--gold);padding:12px 18px;font-size:.85rem;letter-spacing:.04em;max-width:760px;margin:0 auto 50px}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;align-items:stretch}
+.tier{background:var(--card);border:1px solid var(--line);padding:40px 32px;display:flex;flex-direction:column;transition:transform .25s ease,border-color .25s ease}
+.tier:hover{transform:translateY(-4px);border-color:var(--line-strong)}
+.tier-feature{border-color:var(--gold);box-shadow:0 0 0 1px rgba(201,165,76,.25)}
+.tier h3{font-size:1.7rem}
+.price{font-family:var(--serif);font-size:1.4rem;color:var(--gold);margin:0 0 20px}
+.tier ul{list-style:none;padding:0;margin:0 0 30px;flex:1}
+.tier li{padding:10px 0;border-bottom:1px solid rgba(201,165,76,.12)}
+.tier .btn{text-align:center;margin:0}
+.site-form{background:var(--card);border:1px solid var(--line);padding:44px;max-width:560px;margin:0 auto}
+.site-form.wide{max-width:860px}
+.form-title{font-size:1.6rem;margin-bottom:24px}
+.field{display:flex;flex-direction:column;margin-bottom:20px}
+.field label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:8px}
+.field input,.field select,.field textarea{padding:13px 14px;background:#0a0a0a;border:1px solid var(--line);color:var(--ink);font:300 1rem var(--sans);border-radius:0}
+.field input:focus,.field select:focus,.field textarea:focus,.nl-row input:focus{outline:none;border-color:var(--gold)}
+.field input[type=date]{color-scheme:dark}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 26px}
+.grid2 .full{grid-column:1/-1}
+.site-form .btn{margin:6px 0 0}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.two-col .site-form{margin:0}
+.perk-list{list-style:none;padding:0;margin:0}
+.perk-list li{padding:14px 0 14px 26px;border-bottom:1px solid rgba(201,165,76,.12);position:relative}
+.perk-list li::before{content:"";position:absolute;left:0;top:26px;width:12px;height:1px;background:var(--gold)}
+.perk-list strong{color:var(--gold-hi);font-weight:500}
+.foot-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin-bottom:18px}
+.foot-nav a{color:var(--muted);text-decoration:none}.foot-nav a:hover{color:var(--gold)}
+@media (max-width:980px){
+ .nav{flex-direction:column;gap:10px;padding:14px 16px}
+ nav[aria-label="Main"]{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px}
+ nav[aria-label="Main"] a{margin:0}
+}
 @media (max-width:800px){
  body{font-size:16px}
- .featured,.books,.about,.connect{padding:72px 0}
- .featured-grid,.about-grid{grid-template-columns:1fr;gap:40px}
- .featured-cover{max-width:300px;margin:0 auto}
+ .books,.about,.connect,.tiers-sec,.form-sec{padding:64px 0}
+ .hero{padding:56px 0 70px}.hero-head{margin-bottom:48px}
+ .page-hero{padding:60px 0 40px}
+ .featured-grid,.about-grid,.two-col,.grid2{grid-template-columns:1fr;gap:0 0}
+ .featured-grid,.about-grid,.two-col{gap:40px}
+ .hero .featured-cover{max-width:320px;margin:0 auto}
  .author-photo{max-width:240px}
  .about .section-title{text-align:center}.about .section-title::after{margin-left:auto}
- nav a{margin-left:12px;letter-spacing:.1em;font-size:.68rem}
- .nav{padding:14px 18px}
- .book .btn-ghost{display:inline-block;margin:4px 6px 0 0}
+ nav[aria-label="Main"] a{font-size:.66rem;letter-spacing:.12em}
  .btn{display:block;text-align:center;margin:10px 0}
- .newsletter{padding:28px}
+ .book .btn-ghost{display:inline-block;margin:4px 6px 0 0}
+ .newsletter,.site-form{padding:28px 22px}
+ .nl-row .btn{width:100%}
 }
