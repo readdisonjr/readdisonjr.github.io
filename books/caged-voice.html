@@ -109,6 +109,13 @@
       if (m) { m.textContent = f.dataset.msg || "Thank you! This form opens soon. Nothing has been sent yet."; m.classList.add("show"); }
     });
   });
+  document.querySelectorAll("form[data-gc-submit]").forEach(function (f) {
+    f.addEventListener("submit", function () {
+      if (window.goatcounter && typeof window.goatcounter.count === "function") {
+        window.goatcounter.count({ path: f.dataset.gcSubmit, title: "Newsletter signup", event: true });
+      }
+    });
+  });
 </script>
 
 <script data-goatcounter="https://readdisonjr.goatcounter.com/count"

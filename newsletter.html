@@ -40,7 +40,7 @@
     <p class="eyebrow">Newsletter</p>
     <h1>Join the Reader List</h1>
     <span class="rule" aria-hidden="true"></span>
-    <p class="tagline">New books, early chapters, and the stories behind the stories.</p>
+    <p class="tagline">Early access to free review copies, new books, early chapters, and the stories behind the stories.</p>
   </div>
 </section>
 <main>
@@ -49,6 +49,7 @@
     <div class="perks">
       <h2 class="form-title">What You'll Get</h2>
       <ul class="perk-list">
+        <li><strong>Early access to free review copies</strong> before launch day when new books open for early readers.</li>
         <li><strong>New-release alerts</strong> on the day a book goes live, with links to every store.</li>
         <li><strong>Early chapters</strong> and sneak peeks before release day.</li>
         <li><strong>Behind-the-scenes notes</strong> from the writing desk and the road from soldier to storyteller.</li>
@@ -56,14 +57,11 @@
         <li><strong>No spam.</strong> Unsubscribe anytime.</li>
       </ul>
     </div>
-    <!-- PLACEHOLDER FORM: no email service connected yet. Submitting shows a "coming soon" message; nothing is sent or stored. -->
-    <form class="site-form js-placeholder-form" data-msg="Thank you! Newsletter sign-ups open soon. Nothing has been sent yet, so please check back shortly.">
+    <form class="site-form" action="https://buttondown.com/api/emails/embed-subscribe/readdisonjr" method="post" data-gc-submit="newsletter-signup-page">
       <h2 class="form-title">Sign Up</h2>
-      <div class="field"><label for="n-name">First name</label><input id="n-name" name="name" required></div>
-      <div class="field"><label for="n-email">Email</label><input id="n-email" name="email" type="email" required></div>
+      <div class="field"><label for="n-email">Email address</label><input id="n-email" name="email" type="email" placeholder="you@example.com" required></div>
       <button type="submit" class="btn btn-primary">Join the list</button>
-      <p class="form-msg" role="status" aria-live="polite"></p>
-      <p class="fine">Sign-ups open soon.</p>
+      <p class="fine">You'll get a quick confirmation email to finish signing up. Powered by <a href="https://buttondown.com/readdisonjr" target="_blank" rel="noopener">Buttondown</a>.</p>
     </form>
   </div>
 </section>
@@ -89,6 +87,13 @@
       ev.preventDefault();
       var m = f.querySelector(".form-msg");
       if (m) { m.textContent = f.dataset.msg || "Thank you! This form opens soon. Nothing has been sent yet."; m.classList.add("show"); }
+    });
+  });
+  document.querySelectorAll("form[data-gc-submit]").forEach(function (f) {
+    f.addEventListener("submit", function () {
+      if (window.goatcounter && typeof window.goatcounter.count === "function") {
+        window.goatcounter.count({ path: f.dataset.gcSubmit, title: "Newsletter signup", event: true });
+      }
     });
   });
 </script>
